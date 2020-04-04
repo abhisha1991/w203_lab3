@@ -13097,7 +13097,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;dplyr&quot;</span><span class="p">)</span>
@@ -13126,7 +13126,6 @@ div#notebook {
 <span class="nf">library</span><span class="p">(</span><span class="n">corrplot</span><span class="p">)</span>
 <span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;GGally&quot;</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">GGally</span><span class="p">)</span>
-
 <span class="c1"># set standard height and width for images displayed</span>
 <span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">5</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">5</span><span class="p">)</span>
 </pre></div>
@@ -19211,8 +19210,8 @@ We also notice that the correlation between the residuals and the model variable
 <p>Its interesting to note that polpc is a significant variable in our summary output, but NOT significant in the heteroskedastic robust standard error coefficient calculation.</p>
 <p>Model fit metrics are looking good. Adjusted R squared is around 71% and AIC / BIC scores are negative (interesting to note).</p>
 <p>Meaning of negative AIC or BIC:</p>
-<p><a href="https://www.reddit.com/r/AskStatistics/comments/5ydt2c/if_my_aic_and_bic_are_negative_does_that_mean/">https://www.reddit.com/r/AskStatistics/comments/5ydt2c/if_my_aic_and_bic_are_negative_does_that_mean/</a>
-<a href="https://stat.ethz.ch/pipermail/r-help/2005-April/069550.html">https://stat.ethz.ch/pipermail/r-help/2005-April/069550.html</a></p>
+<p><a href="https://www.reddit.com/r/AskStatistics/comments/5ydt2c/if_my_aic_and_bic_are_negative_does_that_mean/">https://www.reddit.com/r/AskStatistics/comments/5ydt2c/if_my_aic_and_bic_are_negative_does_that_mean/</a></p>
+<p><a href="https://stat.ethz.ch/pipermail/r-help/2005-April/069550.html">https://stat.ethz.ch/pipermail/r-help/2005-April/069550.html</a></p>
 
 </div>
 </div>
@@ -19338,7 +19337,7 @@ We expect Education_Years to be negatively correlated with crime rate.</p>
 <li>beta_omitted is negative (Education_Years should be negatively correlated with crime rate) </li>
 <li>delta is negative (prbarr should be negatively correlated with Education_Years)</li>
 </ol>
-<p>Hence, beta_omitted * delta is positive. Hence, betaj_hat is larger than betaj_pop. This means that we have <strong>overestimated the effect of prbarr by omitting Education_Years from our model</strong>. If Education_Years was included, then prbarr coefficient would have been smaller in absolute value terms.</p>
+<p>Hence, beta_omitted <em> delta is positive. Hence, betaj_hat is larger than betaj_pop. This means that we have <strong>underestimated the effect of prbarr by omitting Education_Years from our model</strong>. We say underestimated because coefficient for prbarr is negative and we add a positive value (beta_omitted </em> delta) to it. So we have drawn the coefficient for prbarr closer to 0. If Education_Years was included, then prbarr coefficient would have been further away from 0 in the negative direction.</p>
 
 </div>
 </div>
